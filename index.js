@@ -11,7 +11,7 @@ const defaultOutputDirectory = '/remark-link-card/';
 
 const rlc = (options) => {
   return async (tree) => {
-    transformers = [];
+    const transformers = [];
     visit(tree, 'paragraph', (paragraphNode, index) => {
       if (paragraphNode.children.length !== 1) {
         return tree;
